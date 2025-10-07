@@ -1471,15 +1471,378 @@
         <section id="shopify-section-template--25309701472581__174921553081656b22" class="shopify-section section">
             <div class="page-width scroll-trigger animate--slide-in">
                 <div id="shopify-block-AYUkvQktvV1NTbmNyN__forms_inline_iFd7aN" class="shopify-block shopify-app-block">
-                    <div id='AYUkvQktvV1NTbmNyN__forms_inline_iFd7aN' data-form-root='true' data-forms-id='forms-root-499243' data-forms-text-color='#202020' data-forms-button-background-color='#202020' data-forms-button-label-color='#ffffff' data-forms-links-color='#1878b9'
-                        data-forms-errors-color='#e02229' data-forms-text-alignment='center' data-forms-alignment='center' data-forms-padding-top='0' data-forms-padding-right='0' data-forms-padding-bottom='0' data-forms-padding-left='0'></div>
+                    <section class="offerte-section">
+    <style>
+        .offerte-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 20px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
 
-                    <script>
-                        window['ShopifyForms'] = {
-                            ...window['ShopifyForms'],
-                            currentPageType: "page"
-                        };
-                    </script>
+        .offerte-section * {
+            box-sizing: border-box;
+        }
+
+        .offerte-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .offerte-header h2 {
+            font-size: 2.2em;
+            color: #103948;
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+
+        .offerte-header p {
+            font-size: 1em;
+            color: #64748b;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .offerte-form {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 8px 32px rgba(16, 57, 72, 0.1);
+            border: 1px solid rgba(16, 57, 72, 0.1);
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group.full-width {
+            grid-column: 1 / -1;
+        }
+
+        .offerte-section label {
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: #103948;
+            font-size: 0.9em;
+        }
+
+        .offerte-section input[type="text"],
+        .offerte-section input[type="email"],
+        .offerte-section input[type="tel"],
+        .offerte-section input[type="date"],
+        .offerte-section textarea,
+        .offerte-section select {
+            padding: 12px 16px;
+            border: 2px solid #e2e8f0;
+            border-radius: 10px;
+            font-size: 0.95em;
+            font-family: inherit;
+            transition: all 0.3s ease;
+            background: white;
+        }
+
+        .offerte-section input:focus,
+        .offerte-section textarea:focus,
+        .offerte-section select:focus {
+            outline: none;
+            border-color: #103948;
+            box-shadow: 0 0 0 3px rgba(16, 57, 72, 0.1);
+        }
+
+        .offerte-section textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .phone-group {
+            display: grid;
+            grid-template-columns: 140px 1fr;
+            gap: 10px;
+        }
+
+        .radio-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+        }
+
+        .radio-option {
+            position: relative;
+        }
+
+        .radio-option input[type="radio"] {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+        }
+
+        .radio-label {
+            display: block;
+            padding: 14px 18px;
+            border: 2px solid #e2e8f0;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+            font-weight: 500;
+            color: #475569;
+            background: white;
+        }
+
+        .radio-option input[type="radio"]:checked + .radio-label {
+            border-color: #103948;
+            background: #103948;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(16, 57, 72, 0.3);
+        }
+
+        .radio-label:hover {
+            border-color: #103948;
+            transform: translateY(-1px);
+        }
+
+        .submit-btn {
+            grid-column: 1 / -1;
+            padding: 16px;
+            background: #103948;
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 1em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-top: 8px;
+        }
+
+        .submit-btn:hover {
+            background: #1a5468;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(16, 57, 72, 0.3);
+        }
+
+        .submit-btn:active {
+            transform: translateY(0);
+        }
+
+        .submit-btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+
+        .message {
+            display: none;
+            padding: 16px;
+            border-radius: 10px;
+            text-align: center;
+            margin-top: 20px;
+            animation: slideIn 0.3s ease;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .success-message {
+            background: #10b981;
+            color: white;
+            font-weight: 500;
+        }
+
+        .error-message {
+            background: #ef4444;
+            color: white;
+            font-weight: 500;
+        }
+
+        @media (max-width: 768px) {
+            .offerte-section {
+                padding: 40px 16px;
+            }
+
+            .offerte-form {
+                padding: 24px;
+            }
+
+            .form-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .radio-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .phone-group {
+                grid-template-columns: 1fr;
+            }
+
+            .offerte-header h2 {
+                font-size: 1.8em;
+            }
+
+            .submit-btn {
+                margin-top: 4px;
+            }
+        }
+
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .radio-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+
+    <div class="offerte-header">
+        <h2>Offerte Aanvraag</h2>
+        <p>Vul de velden in en ontvang snel een offerte op maat voor uw evenement</p>
+    </div>
+
+    <form class="offerte-form" id="offerteForm">
+        <input type="hidden" name="access_key" value="c3bb293d-af29-49e3-87c9-d2b85c27c3d2">
+        <input type="hidden" name="subject" value="NIEUWE OFFERTE">
+
+        <div class="form-grid">
+            <div class="form-group full-width">
+                <label>Gekozen pakket *</label>
+                <div class="radio-grid">
+                    <div class="radio-option">
+                        <input type="radio" id="mirror" name="pakket" value="Mirror Booth" required>
+                        <label for="mirror" class="radio-label">Mirror Booth</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="mirror-lite" name="pakket" value="Mirror Booth Lite">
+                        <label for="mirror-lite" class="radio-label">Mirror Booth Lite</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="classic" name="pakket" value="Classic Booth">
+                        <label for="classic" class="radio-label">Classic Booth</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="classic-lite" name="pakket" value="Classic Booth Lite">
+                        <label for="classic-lite" class="radio-label">Classic Booth Lite</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="naam">Naam *</label>
+                <input type="text" id="naam" name="naam" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email *</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group full-width">
+                <label for="telefoon">Telefoonnummer *</label>
+                <div class="phone-group">
+                    <select name="land_code">
+                        <option value="+31">Nederland +31</option>
+                        <option value="+32">België +32</option>
+                        <option value="+49">Duitsland +49</option>
+                    </select>
+                    <input type="tel" id="telefoon" name="telefoonnummer" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="locatie">Locatie *</label>
+                <input type="text" id="locatie" name="locatie" placeholder="Stad, locatie" required>
+            </div>
+
+            <div class="form-group">
+                <label for="datum">Datum evenement *</label>
+                <input type="date" id="datum" name="datum" required>
+            </div>
+
+            <div class="form-group full-width">
+                <label for="tijdsperiode">Tijdsperiode verhuur *</label>
+                <input type="text" id="tijdsperiode" name="tijdsperiode" placeholder="Bijv. 18:00 - 23:00" required>
+            </div>
+
+            <div class="form-group full-width">
+                <label for="beschrijving">Beschrijf uw evenement *</label>
+                <textarea id="beschrijving" name="beschrijving_evenement" placeholder="Vertel ons meer over uw feest of evenement..." required></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">Aanvragen</button>
+
+            <div class="message success-message" id="successMessage">
+                ✓ Bedankt! Wij nemen zo snel mogelijk contact met u op.
+            </div>
+
+            <div class="message error-message" id="errorMessage">
+                ✗ Er is iets misgegaan. Probeer het later opnieuw.
+            </div>
+        </div>
+    </form>
+
+    <script>
+        (function() {
+            const form = document.getElementById('offerteForm');
+            const successMessage = document.getElementById('successMessage');
+            const errorMessage = document.getElementById('errorMessage');
+
+            form.addEventListener('submit', async (e) => {
+                e.preventDefault();
+
+                const submitBtn = form.querySelector('.submit-btn');
+                const originalText = submitBtn.textContent;
+                submitBtn.textContent = 'Verzenden...';
+                submitBtn.disabled = true;
+
+                successMessage.style.display = 'none';
+                errorMessage.style.display = 'none';
+
+                const formData = new FormData(form);
+
+                try {
+                    const response = await fetch('https://api.web3forms.com/submit', {
+                        method: 'POST',
+                        body: formData
+                    });
+
+                    const data = await response.json();
+
+                    if (data.success) {
+                        successMessage.style.display = 'block';
+                        form.reset();
+                        setTimeout(() => {
+                            successMessage.style.display = 'none';
+                        }, 5000);
+                    } else {
+                        errorMessage.style.display = 'block';
+                    }
+                } catch (error) {
+                    errorMessage.style.display = 'block';
+                } finally {
+                    submitBtn.textContent = originalText;
+                    submitBtn.disabled = false;
+                }
+            });
+        })();
+    </script>
+</section>
 
 
                 </div>
