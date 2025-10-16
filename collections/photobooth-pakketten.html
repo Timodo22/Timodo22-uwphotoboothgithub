@@ -28,8 +28,7 @@
 
     <script src="//uwphotobooth.nl/cdn/shop/t/6/assets/constants.js?v=132983761750457495441744294649" defer="defer"></script>
     <script src="//uwphotobooth.nl/cdn/shop/t/6/assets/pubsub.js?v=25310214064522200911744294649" defer="defer"></script>
-<script src="//uwphotobooth.nl/cdn/shop/t/6/assets/global.js" defer></script>
-
+    <script src="//uwphotobooth.nl/cdn/shop/t/6/assets/global.js?v=184345515105158409801744294649" defer="defer"></script>
     <script src="//uwphotobooth.nl/cdn/shop/t/6/assets/details-disclosure.js?v=13653116266235556501744294649" defer="defer"></script>
     <script src="//uwphotobooth.nl/cdn/shop/t/6/assets/details-modal.js?v=25581673532751508451744294649" defer="defer"></script>
     <script src="//uwphotobooth.nl/cdn/shop/t/6/assets/search-form.js?v=133129549252120666541744294649" defer="defer"></script>
@@ -328,20 +327,6 @@
                 t.src = "https://uwphotobooth.nl/cdn/shopifycloud/portable-wallets/latest/portable-wallets.nl.js", t.type = "module", document.head.appendChild(t)
             }
         };
-    </script>
-    <script data-source-attribution="shopify.dynamic_checkout.buyer_consent">
-        function portableWalletsHideBuyerConsent(e) {
-            var t = document.getElementById("shopify-buyer-consent"),
-                n = document.getElementById("shopify-subscription-policy-button");
-            t && n && (t.classList.add("hidden"), t.setAttribute("aria-hidden", "true"), n.removeEventListener("click", e))
-        }
-
-        function portableWalletsShowBuyerConsent(e) {
-            var t = document.getElementById("shopify-buyer-consent"),
-                n = document.getElementById("shopify-subscription-policy-button");
-            t && n && (t.classList.remove("hidden"), t.removeAttribute("aria-hidden"), n.addEventListener("click", e))
-        }
-        window.Shopify ? .PaymentButton && (window.Shopify.PaymentButton.hideBuyerConsent = portableWalletsHideBuyerConsent, window.Shopify.PaymentButton.showBuyerConsent = portableWalletsShowBuyerConsent);
     </script>
     <script data-source-attribution="shopify.dynamic_checkout.cart.bootstrap">
         document.addEventListener("DOMContentLoaded", (function() {
