@@ -1,1 +1,1 @@
-No Content: https://uwphotobooth.nl/cdn/shopifycloud/checkout-web/assets/c1/index.D6xz48ja.js
+No Content: https:/cdn/shopifycloud/checkout-web/assets/c1/index.D6xz48ja.js

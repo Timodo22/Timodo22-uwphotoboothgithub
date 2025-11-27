@@ -1,1 +1,1 @@
-No Content: https://uwphotobooth.nl/cdn/shopifycloud/checkout-web/assets/c1/polyfills.TiXrO7Ka.js
+No Content: https:/cdn/shopifycloud/checkout-web/assets/c1/polyfills.TiXrO7Ka.js

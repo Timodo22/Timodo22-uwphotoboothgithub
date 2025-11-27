@@ -1,1 +1,1 @@
-No Content: https://uwphotobooth.nl/cdn/shopifycloud/checkout-web/assets/c1/DeliveryMethodSelectorSection.CYk2Dc0t.js
+No Content: https:/cdn/shopifycloud/checkout-web/assets/c1/DeliveryMethodSelectorSection.CYk2Dc0t.js
